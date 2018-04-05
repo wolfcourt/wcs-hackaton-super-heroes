@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" ng-app="SuperHeroesApp">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
@@ -9,6 +9,52 @@
         <link rel="stylesheet" href="assets/css/style.css"/>
 	</head>
 	<body>
+        <!-- Loader -->
+        <!-- <div id="loader"></div> -->
+        <!-- Game container -->
+        <div class="game-container">
+            <!-- Selection menu -->
+            <div id="game-selection" ng-controller="SelectionController">
+                <!-- Selection overview -->
 
+
+                <!-- Selection cards -->
+                <div class="selection player-two">
+                    <div class="custom-card mbs-1" ng-repeat="character in characters" ng-style="{'background-image': 'url({{character.image}})'}">
+                        <div class="custom-card-content">
+                            <b>{{ character.name }}</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fight -->
+
+            <!-- Finish & Restart -->
+        </div>
+                    
+        <!-- JavaScript -->
+        <script type="text/javascript" src="assets/plugins/angularjs/angular.min.js"></script>
+        <script type="text/javascript">
+            const App = angular.module("SuperHeroesApp", []);
+
+            App.controller("SelectionController", function($scope, $http){
+                $scope.characters = [];
+
+                $scope.getCharacters = async () => {
+                    console.log('Récupération de la liste des cartes...');
+                    let doWebRequest = sessionStorage.getItem('charactersList') === null;
+                    if (doWebRequest) {
+                        let { data } = await $http({ method: 'GET', url: '/data/selection.php' });
+                        sessionStorage.setItem('charactersList', JSON.stringify(data));
+                    }
+                    console.log('Liste des cartes récupérées.');
+                    $scope.characters = JSON.parse(sessionStorage.getItem('charactersList'));
+                    if(doWebRequest) $scope.$apply();
+                };
+
+                $scope.getCharacters();
+            })
+        </script>
 	</body>
 </html>

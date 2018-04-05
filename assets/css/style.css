@@ -1,4 +1,98 @@
-/** ##### GLOBAL ##### */
-* { box-sizing: border-box; }
-html { background-color: #EEEEEE; }
+/* ##### Fonts ##### */
+@font-face { font-family: "Roboto Thin";    src: url(../fonts/roboto/Thin.ttf); }
+@font-face { font-family: "Roboto Light";   src: url(../fonts/roboto/Light.ttf); }
+@font-face { font-family: "Roboto Regular"; src: url(../fonts/roboto/Regular.ttf); }
+@font-face { font-family: "Roboto Medium";  src: url(../fonts/roboto/Medium.ttf); }
+@font-face { font-family: "Roboto Bold";    src: url(../fonts/roboto/Bold.ttf); }
+
+/** ##### GLOBAL CARDS ##### */
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: "Roboto Light";
+}
+html, body, .game-container { height: 100%; }
+b, strong {
+    font-family: "Roboto Regular";
+    font-weight: initial !important;
+}
+
+/** ##### MATERIAL BOX SHADOW ##### */
+.mbs-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.mbs-1:hover { box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); }
+.mbs-2 { box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); }
+.mbs-3 { box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); }
+.mbs-4 { box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); }
+.mbs-5 { box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); }
+
+/** ##### LOADER ##### */
+#loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333333;
+    background-image: url('../images/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 250px;
+}
+
+/** ##### GAME CONTAINER ##### */
+.game-container {
+    background: #333333;
+    padding: 30px;
+    color: white;
+    overflow: hidden;
+}
+
+/** ##### SELECTION MENU ##### */
+.selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.selection .custom-card {
+    width: 115px;
+    height: 175px;
+    padding: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px 15px 15px 0px;
+    cursor: pointer;
+    opacity: 0.5;
+    position: relative;
+}
+
+.selection .custom-card:hover,
+.selection .custom-card.selected {
+    opacity: 1;
+}
+
+.selection .custom-card:last-of-type {
+    margin-right: 0px;
+}
+
+.selection .custom-card .custom-card-content {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 5px;
+    z-index: 1;
+    text-align: center;
+    word-break: break-word;
+}
+
+/** PLAYERS COLORS */
+.selection.player-one .custom-card:hover .custom-card-content {
+    background-color: #E53935;
+}
+
+.selection.player-two .custom-card:hover .custom-card-content {
+    background-color: #3949AB;
+}
 
