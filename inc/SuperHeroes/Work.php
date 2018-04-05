@@ -8,7 +8,6 @@
 
 namespace App\SuperHeroes;
 
-
 class Work
 {
     /** @var string */

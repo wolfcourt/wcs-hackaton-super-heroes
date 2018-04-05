@@ -8,8 +8,7 @@
 
 namespace App\SuperHeroes;
 
-
-class appearance
+class Appearance
 {
     /** @var string */
     private $gender;
@@ -87,5 +86,3 @@ class appearance
     }
 
 }
-
-

@@ -8,7 +8,6 @@
 
 namespace App\SuperHeroes;
 
-
 class Connections
 {
     /** @var string */
