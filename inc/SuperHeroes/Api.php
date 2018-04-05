@@ -48,7 +48,7 @@ class Api {
         $data = $this->getJSON('all.json');
         $characters = [];
         foreach ($data AS $row)
-            $characters[] = new Character($row['id']);
+            $characters[] = new Character($row);
         return $characters;
     }
 
