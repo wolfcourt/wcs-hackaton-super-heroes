@@ -4,6 +4,7 @@
 @font-face { font-family: "Roboto Regular"; src: url(../fonts/roboto/Regular.ttf); }
 @font-face { font-family: "Roboto Medium";  src: url(../fonts/roboto/Medium.ttf); }
 @font-face { font-family: "Roboto Bold";    src: url(../fonts/roboto/Bold.ttf); }
+@font-face { font-family: "Fighting Spirit PG"; src: url("../fonts/fighting-spirit-tbs/fighting spirit_PG.ttf") }
 
 /** ##### GLOBAL CARDS ##### */
 * { box-sizing: border-box; }
@@ -15,6 +16,10 @@ html, body, .game-container { height: 100%; }
 b, strong {
     font-family: "Roboto Regular";
     font-weight: initial !important;
+}
+h1 {
+    font-family: "Fighting Spirit PG";
+
 }
 
 /** ##### MATERIAL BOX SHADOW ##### */
