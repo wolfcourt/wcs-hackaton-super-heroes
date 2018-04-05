@@ -27,7 +27,7 @@ class appearance
     public function __construct(array $data)
     {
         foreach ($data as $key => $value)
-            if(property_exits($this, $key))
+            if(property_exists($this, $key))
                 $this->$key = $value;
     }
 
@@ -35,7 +35,7 @@ class appearance
      * return Gender
      * @return string
      */
-    public function getGender()
+    public function getGender() : string
     {
         return $this->gender;
     }
@@ -44,7 +44,7 @@ class appearance
      * return Race
      * @return string
      */
-    public function getRace()
+    public function getRace() : string
     {
         return $this->race;
     }
@@ -53,7 +53,7 @@ class appearance
      * return Height
      * @return string[]
      */
-    public function getHeight()
+    public function getHeight() : string
     {
         return $this->height;
     }
@@ -62,7 +62,7 @@ class appearance
      * return Weight
      * @return string[]
      */
-    public function getWeight()
+    public function getWeight() : string
     {
         return $this->weight;
     }
@@ -72,7 +72,7 @@ class appearance
      * return Eye Color
      * @return string
      */
-    public function getEyeColor()
+    public function getEyeColor() : string
     {
         return $this->eyeColor;
     }
@@ -81,7 +81,7 @@ class appearance
      * return Hair Color
      * @return string
      */
-    public function getHairColor()
+    public function getHairColor() : string
     {
         return $this->hairColor;
     }

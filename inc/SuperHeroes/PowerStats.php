@@ -2,48 +2,37 @@
 
 namespace App\SuperHeroes;
 
-class Powerstats
+class PowerStats
 {
-    /**
-     * @return int
-     */ 
+    /** @var int */
     private $intelligence;
 
-    /**
-     * @return int
-     */ 
-    private $strenght;
+    /** @var int */
+    private $strength;
 
-    /**
-     * @return int
-     */ 
+    /** @var int */
     private $speed;
 
-    /**
-     * @return int
-     */ 
+    /** @var int */
     private $durability;
 
-    /**
-     * @return int
-     */ 
+    /** @var int */
     private $power;
 
-    /**
-     * @return int
-     */ 
+    /** @var int */
     private $combat;
 
     public function __construct(array $data)
     {
         foreach ($data as $key => $value)
             if(property_exists($this, $key))
-            $this->$key = $value;
+                $this->$key = $value;
     }
     
 
     /**
      * Get the value of intelligence
+     * @return int
      */ 
     public function getIntelligence() : int
     {
@@ -51,15 +40,17 @@ class Powerstats
     }
 
     /**
-     * Get the value of strenght
+     * Get the value of strength
+     * @return int
      */ 
-    public function getStrenght() : int
+    public function getStrength() : int
     {
-        return $this->strenght;
+        return $this->strength;
     }
 
     /**
      * Get the value of speed
+     * @return int
      */ 
     public function getSpeed() : int
     {
@@ -68,6 +59,7 @@ class Powerstats
 
     /**
      * Get the value of durability
+     * @return int
      */ 
     public function getDurability() : int
     {
@@ -76,6 +68,7 @@ class Powerstats
 
     /**
      * Get the value of power
+     * @return int
      */ 
     public function getPower() : int
     {
@@ -84,6 +77,7 @@ class Powerstats
 
     /**
      * Get the value of combat
+     * @return int
      */ 
     public function getCombat() : int
     {

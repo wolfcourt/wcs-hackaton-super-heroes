@@ -11,13 +11,9 @@ namespace App\SuperHeroes;
 
 class Connections
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     private $groupAffiliation;
-    /**
-     * @var string
-     */
+    /** @var string */
     private $relatives;
 
     public function __construct(array $data)
@@ -27,19 +23,21 @@ class Connections
                 $this->$key = $value;
     }
 
+    /**
+     * Return group affiliation
+     * @return string
+     */
     public function getGroupAffiliation(): string
     {
         return $this->groupAffiliation;
     }
 
     /**
+     * Return relations
      * @return string
      */
     public function getRelatives(): string
     {
         return $this->relatives;
     }
-    /**
-     * @return string
-     */
 }

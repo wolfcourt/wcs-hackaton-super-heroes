@@ -11,14 +11,17 @@ namespace App\SuperHeroes;
 
 class Work
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     private $occupation;
-    /**
-     * @var string
-     */
+    /** @var string */
     private $base;
+
+    public function __construct(array $data)
+    {
+        foreach ($data as $key => $value)
+            if (property_exists($this, $key))
+                $this -> $key = $value;
+    }
 
     /**
      * return occupation
@@ -36,15 +39,5 @@ class Work
     public function getBase(): string
     {
         return $this->base;
-    }
-
-    /**
-     * @param string $base
-     */
-    public function __construct(array $data)
-    {
-        foreach ($data as $key => $value)
-            if (property_exists($this, $key))
-                $this -> $key = $value;
     }
 }
