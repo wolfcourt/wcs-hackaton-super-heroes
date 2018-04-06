@@ -22,7 +22,6 @@
             'slug' => $character->getSlug(),
             'image' => $character->getImages()->getLg(),
         ];
-        if(count($dataToSend) === 30) break;
     }
 
     file_put_contents($cacheFile, json_encode($dataToSend));
