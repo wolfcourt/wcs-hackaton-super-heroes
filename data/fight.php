@@ -71,8 +71,14 @@ while ($playerOneLife > 0 and $playerTwoLife > 0){
 
 
     $turns[] = [
-        'playerOne' => $playerOneLife,
-        'playerTwo' => $playerTwoLife
+        'playerOne' => [
+            'damage' => $playerOneDmg,
+            'life' => $playerOneLife,
+        ],
+        'playerTwo' => [
+            'Damage' => $playerTwoDmg,
+            'Life' => $playerTwoLife,
+        ],
     ];
 }
 
