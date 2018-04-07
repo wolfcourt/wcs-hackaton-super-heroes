@@ -5,10 +5,6 @@
 
     use App\SuperHeroes\Api;
 
-    $cacheFile = __DIR__ . '/cache/selection.json';
-    if (file_exists($cacheFile))
-        die(file_get_contents($cacheFile));
-
     $api = new Api();
 
     $characters = $api->getAllCharacters();
@@ -24,5 +20,4 @@
         ];
     }
 
-    file_put_contents($cacheFile, json_encode($dataToSend));
     echo json_encode($dataToSend);
