@@ -12,6 +12,12 @@ Notre premier hackaton à la WildCodeSchool.
 3. Retournez à la racine puis executez la commande `sh run.sh`, votre navigateur s'ouvrira.
 4. Pour éteindre les serveurs, executez la commande `sh kill-servers.sh`.
 
+## Modifier le server (PHP)
+> Pensez à vérifier que vous ayez bien les modules installés via composer.
+1. Déplacez vous dans le dossier `server/`.
+* `server/inc/` => Classes de gestion.
+* `server/data/` => Données utilisées pour le jeu.
+
 ## Modifier le client (VueJS)
 > Le dépôt que vous avez téléchargé dispose déjà d'une version utilisable du client sans que vous ayez quoi que ce soit à effectuer.
 1. Déplacez vous dans le dossier `client/`.
@@ -25,3 +31,9 @@ npm run dev
 # build for production with minification
 npm run build
 ```
+
+## Développeurs
+* Nassgr (https://github.com/Nassgr)
+* Wolfcourt (https://github.com/wolfcourt)
+* Neimax (https://github.com/Neimax)
+* MaximeGOyard (https://github.com/MaximeGOyard)
