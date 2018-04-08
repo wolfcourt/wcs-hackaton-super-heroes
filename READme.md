@@ -31,6 +31,7 @@ npm run dev
 # build for production with minification
 npm run build
 ```
+![Illustration](https://i.imgur.com/PZVhNg9.png)
 
 ## Développeurs
 * Nassgr (https://github.com/Nassgr)
