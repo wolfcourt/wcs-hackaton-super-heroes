@@ -12,7 +12,7 @@ Notre premier hackaton à la WildCodeSchool.
 3. Retournez à la racine puis executez la commande `sh run.sh`, votre navigateur s'ouvrira.
 4. Pour éteindre les serveurs, executez la commande `sh kill-servers.sh`.
 
-## Modifier le server (PHP)
+## Modifier le serveur (PHP)
 > Pensez à vérifier que vous ayez bien les modules installés via composer.
 1. Déplacez vous dans le dossier `server/`.
 * `server/inc/` => Classes de gestion.
